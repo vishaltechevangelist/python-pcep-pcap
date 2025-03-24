@@ -20,7 +20,7 @@ chars = "<<[]]]" # this could be a very long string with an even length.
 word = "Cool"
 
 chars_length = len(chars)
-middle_index = int(chars_length/2)
+middle_index = int(chars_length/2) # divide returns float hence need to cast as int
 result = chars[:middle_index] + word + chars[middle_index:]
 print(result)
 
