@@ -10,7 +10,7 @@ IMPORTANT: you must do this programmatically! Don't just
 """
 
 original_list = ['cup', 'cereal', 'milk', (8, 4, 3)]
-sorted_item = sorted(original_list[3])
+sorted_item = sorted(original_list[3]) # return list contains tuple elements
 original_list[3] = tuple(sorted_item)
 print(original_list)
 
