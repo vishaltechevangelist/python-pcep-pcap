@@ -22,6 +22,8 @@ def grow_string(string_to_grow):
 
 print(grow_string("Code"))
 print(grow_string("abc"))
+print(grow_string("ab"))
+print(grow_string("vishal"))
 
 
 

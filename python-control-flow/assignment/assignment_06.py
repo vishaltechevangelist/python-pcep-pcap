@@ -21,13 +21,17 @@ def last2(str):
     count = 0
     mod_str = str[0:-2]
     last_2 = str[-2:]
-    if last_2 in str[0:-2]:
-        count = mod_str.count(last_2)
+    for idx in range(len(mod_str) - 1):
+        if mod_str[idx] == last_2[0] and mod_str[idx + 1] == last_2[1]:
+            count += 1
+    # if last_2 in str[0:-2]:
+    #     count = mod_str.count(last_2)
     return count
 
 print(last2('hixxhi')) #→ 1
 print(last2('xaxxaxaxx')) #→ 1
 print(last2('axxxxaaxx')) #→ 3
+print(last2("vi"))
 
 
 

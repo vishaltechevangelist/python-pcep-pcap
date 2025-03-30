@@ -10,18 +10,29 @@ sequence([1, 1, 2, 1, 2, 3]) → True
 sequence([1, 2]) → False
 sequence([]) → False
 """
-
 # Your Code Below:
-def sequence(list_to_check):
-    list_exist = False
-    if 1 in list_to_check and 2 in list_to_check and 3 in list_to_check:
-        list_exist = True
-    return list_exist
+def sequence(haystack_list):
+    search_sequence = [1, 2, 3]
+    has_sequence = False
+    length_of_loop = len(haystack_list) - len(search_sequence) + 1
+    for i in range(0, length_of_loop):
+        # print(i)
+    # pass
+        if (haystack_list[i] == search_sequence[0] and
+                haystack_list[i + 1] == search_sequence[1] and
+                haystack_list[i + 2] == search_sequence[2]):
+            has_sequence = True
+            break
+    return has_sequence
+
+
 
 print(sequence([1, 1, 2, 3, 1]))
+print(sequence([1, 1, 2, 3]))
 print(sequence([1, 1, 2, 4, 1]))
 print(sequence([1, 1, 2, 1, 2, 3]))
 print(sequence([1, 2]))
+print(sequence([2,3,1]))
 print(sequence([]))
 
 
