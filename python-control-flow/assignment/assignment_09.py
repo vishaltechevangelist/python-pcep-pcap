@@ -38,11 +38,12 @@ d= {
 
 # Your Code Below:
 # --------------------------------------
-
-
-
-
-
+for idx, list_item in enumerate(fr):
+    split_item = list_item.split("|")
+    if split_item[0] not in d.keys():
+        d[split_item[0]] = str(int(max(d.values())) + 1)
+    split_item[0] = d[split_item[0]]
+    fr[idx] = "|".join(split_item)
 
 # don't change the lines below:
 # --------------------------------------
