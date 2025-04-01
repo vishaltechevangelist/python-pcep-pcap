@@ -15,43 +15,53 @@ dog, fish and bird and make them eat and move.
 # Your Code Below:
 
 class Animals:
-    def __init__(self, name, age):
-        self.animal_name = name
-        self.animal_age = age
+    def __init__(self):
+        print("Animal constructed")
 
     def move(self):
-        print("{} is moving".format(self.animal_name))
+        print("Animal is moving")
 
     def eat(self):
-        print("{} is eating".format(self.animal_name))
-
-
-animals = Animals("Vishal", 42)
-animals.eat()
+        print("Animal is eating")
 
 class Bird(Animals):
+    def __init__(self, bird_age, bird_name):
+        #Animals.__init__(self)
+        self.name = bird_name
+        self.age = bird_age
+
     def move(self):
-        print("The bird is flying")
+        print("The {} is flying".format(self.name))
 
 class Dog(Animals):
+    def __init__(self, dog_age, dog_name):
+        Animals.__init__(self)
+        self.name = dog_name
+        self.age = dog_age
+
     def move(self):
         print("The dog is running")
 
 class Fish(Animals):
+    def __init__(self, fish_age, fish_name):
+        Animals.__init__(self)
+        self.name = fish_name
+        self.age = fish_age
+
     def move(self):
         print("The fish is swimming")
 
 bird = Bird("Parrot", 15)
-dog = Dog("Tom", 15)
-fish = Fish("Neo", 1)
-
+# dog = Dog("Tom", 15)
+# fish = Fish("Neo", 1)
+#
 bird.move()
-dog.move()
-fish.move()
+# dog.move()
+# fish.move()
 
 bird.eat()
-dog.eat()
-fish.eat()
+# dog.eat()
+# fish.eat()
 
 
 
