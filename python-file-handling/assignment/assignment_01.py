@@ -8,7 +8,7 @@ import re
 "/Users/vishalsaxena/Documents/python-pcep-pcap/python-file-handling/assignment/project_files" #sys.argv[1]
 # words_to_aggregate = ["hello", "Peter", "computer"] #sys.argv[2:]
 directory_containing_files = sys.argv[1]
-words_to_aggregate = sys.argv[2:][0]
+words_to_aggregate = sys.argv[2:][0].split(",")
 
 # Expected Output:
 # {"there": n, "Michael": n, "running": n}
