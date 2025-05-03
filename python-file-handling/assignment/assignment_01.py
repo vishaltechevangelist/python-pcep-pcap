@@ -4,18 +4,20 @@ import sys
 import os
 import re
 
-# directory_containing_files = \
-"/Users/vishalsaxena/Documents/python-pcep-pcap/python-file-handling/assignment/project_files" #sys.argv[1]
+# directory_containing_files = \"/Users/vishalsaxena/Documents/python-pcep-pcap/python-file-handling/assignment/project_file" #sys.argv[1]
 # words_to_aggregate = ["hello", "Peter", "computer"] #sys.argv[2:]
 directory_containing_files = sys.argv[1]
 words_to_aggregate = sys.argv[2:][0].split(",")
 
+# print(words_to_aggregate)
+# exit(0)
 # Expected Output:
 # {"there": n, "Michael": n, "running": n}
 
 # Your Code Below:
 word_count = {}
 for dir_path, dir_list, file_list in os.walk(directory_containing_files):
+
     for file_name in file_list:
         with open(os.path.join(dir_path, file_name)) as sel_file:
             content = sel_file.read()
